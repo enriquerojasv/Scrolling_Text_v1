@@ -10,6 +10,7 @@
         android:id="@+id/article_heading"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin"
         android:background="@color/purple_500"
         android:padding="@dimen/padding_regular"
         android:text="@string/article_title"
@@ -17,27 +18,39 @@
         android:textColor="@android:color/white"
         android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/article_subheading"
-        android:layout_width="match_parent"
+    <ScrollView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/article_heading"
-        android:padding="@dimen/padding_regular"
-        android:text="@string/article_subtitle"
-        android:textAppearance="@android:style/TextAppearance" />
+        android:layout_marginLeft="@dimen/margin"
+        android:layout_marginRight="@dimen/margin">
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@id/article_subheading">
-
-        <TextView
-            android:id="@+id/article"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:autoLink="web"
-            android:lineSpacingExtra="@dimen/line_spacing"
-            android:text="@string/article_text" />
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/article_subheading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin"
+                android:layout_marginLeft="@dimen/margin"
+                android:layout_marginEnd="@dimen/margin"
+                android:layout_marginRight="@dimen/margin"
+                android:padding="@dimen/padding_regular"
+                android:text="@string/article_subtitle"
+                android:textAppearance="@android:style/TextAppearance" />
+
+            <TextView
+                android:id="@+id/article"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:autoLink="web"
+                android:lineSpacingExtra="@dimen/line_spacing"
+                android:text="@string/article_text" />
+        </LinearLayout>
+
     </ScrollView>
 
 </RelativeLayout>
