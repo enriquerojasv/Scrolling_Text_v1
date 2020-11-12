@@ -66,7 +66,7 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:inputType="text"
-                android:text="@string/comment_placeholder"
+                android:hint="@string/comment_placeholder"
                 android:visibility="invisible" />
 
         </LinearLayout>
